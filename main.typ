@@ -2,8 +2,9 @@
 #set text(
   lang: "cs",
   // font: "New Computer Modern Math",
-  //font: "MesloLGM Nerd Font",
-  size: 11pt,
+  font: "Iosevka NF",
+  // font: "MesloLGM Nerd Font",
+  size: 10pt,
 )
 
 #show heading.where(
@@ -95,9 +96,9 @@ table(
   [*NAT pool*], [24],
   [*Směrovací protokol*], [RIP],
 ))
-\ 
+ 
 #figure(
-  image("./pos_firma_ips.drawio.svg", width: 50%),
+  image("./pos_firma_ips.drawio.svg", width: 52%),
   caption: [Popis sítě firmy a IPS],
 )
 
@@ -108,7 +109,7 @@ Zadaná topologie (topologie H) sítě s barevně vyznačenými virtualními sí
 \ \ \
 
 #figure(
-  image("./pos_project.drawio.svg", width: 70%),
+  image("./pos_project_f.drawio.svg", width: 70%),
     caption: [Schéma základní topologie]
 )
 
@@ -126,9 +127,9 @@ Schéma vyznačuje topologii sítě z pohledu aktivních prvků třetí vrstvy.
 
 = Adresní plán IPv4 (VLSM)
 
-Plán adres IPv4 s přiděleným (veřejným) prefixem 202.206.128.0/17.
 
 == Veřejný rozsah
+Plán veřejných adres IPv4 s přiděleným prefixem 202.206.128.0/17.
 
 #figure(table(
   // columns: 5,
@@ -215,14 +216,14 @@ Adresa mezi směrovačem R1 a směrovačem od IPS.
 = Adresní plán IPv6
 
 Plán adres IPv6 s přiděleným prefixem 2002:d1ec:211a:7000::/52.
-Zkratka `<pre>` je zde označení pro 2002:d1ec:211a 
-(tedy šest prvních bytů IPv6 adresy).
+Zkratka `<pre>` je zde označení pro 
+tedy šest prvních bytů IPv6 adresy - 2002:d1ec:211a.
 
 == Veřejný rozsah
 #figure(
   table(
     // columns: 5,
-    columns: (0.6fr, 0.8fr, 1fr, 1.1fr),
+    columns: (0.6fr, 0.8fr, 0.8fr, 1.3fr),
     fill: (rgb("EAF2F5"), none),
     stroke: 0.8pt + rgb("323232"),
     table.header[*Název segmentu*][*Adresa podsítě/Maska*][*Nejnižší použitelná adresa*][*Nejvyšší použitelná adresa*],
@@ -230,15 +231,15 @@ Zkratka `<pre>` je zde označení pro 2002:d1ec:211a
     [VLAN A],[\<pre\>:7001::/64],[\<pre\>:7001::1],[\<pre\>:7001:ffff:ffff:ffff:ffff],
     [VLAN B],[\<pre\>:7002::/64],[\<pre\>:7002::1],[\<pre\>:7002:ffff:ffff:ffff:ffff],
     [VLAN C],[\<pre\>:7003::/64],[\<pre\>:7003::1],[\<pre\>:7003:ffff:ffff:ffff:ffff],
-    [R1-R2],[\<pre\>:7004::/64],[\<pre\>:7004::1],[\<pre\>:7004:ffff:ffff:ffff:ffff],
-    [R1-R3],[\<pre\>:7005::/64],[\<pre\>:7005:1],[\<pre\>:7005:ffff:ffff:ffff:ffff],
-    [R2-R3],[\<pre\>:7006::/64],[\<pre\>:7006:1],[\<pre\>:7006:ffff:ffff:ffff:ffff],
+    [R1-R2],[\<pre\>:7004::0/127],[\<pre\>:7004::0],[\<pre\>:7004::1],
+    [R1-R3],[\<pre\>:7004::2/127],[\<pre\>:7004::2],[\<pre\>:7004::3],
+    [R2-R3],[\<pre\>:7004::4/127],[\<pre\>:7004::3],[\<pre\>:7004::4],
   ),
   caption: [Rozsahy veřejných adres IPv6 v jednotlivích podsítích]
 )
 
 == Adresy bran a stanic
-
+# TODO: Upravit drawio shit
 #grid(
   columns: (1fr, 1fr),
   align(horizon)[
@@ -253,10 +254,10 @@ Zkratka `<pre>` je zde označení pro 2002:d1ec:211a
         [VLAN C-R1],[10.0.0.2],
         [(R1-R2) R1],[\<pre\>:7004::1],
         [(R1-R2) R2],[\<pre\>:7004::2],
-        [(R1-R3) R1],[\<pre\>:7005::1],
-        [(R1-R3) R3],[\<pre\>:7005::2],
-        [(R2-R3) R2],[\<pre\>:7006::1],
-        [(R2-R3) R3],[\<pre\>:7006::2],
+        [(R1-R3) R1],[\<pre\>:7004::3],
+        [(R1-R3) R3],[\<pre\>:7004::4],
+        [(R2-R3) R2],[\<pre\>:7004::5],
+        [(R2-R3) R3],[\<pre\>:7004::6],
       ),
       caption: [Adresy IPv6 výchozích \ a alternativních bran]
     )
@@ -264,7 +265,7 @@ Zkratka `<pre>` je zde označení pro 2002:d1ec:211a
   align(horizon)[
     #figure(
       table(
-        columns: (1.2fr, 2fr),
+        columns: (1.2fr, 3fr),
         // align: (left, left),
         fill: (rgb("EAF2F5"), none),
         stroke: 0.8pt + rgb("323232"),
