@@ -171,7 +171,7 @@ Adresa mezi směrovačem R1 a směrovačem od ISP.
   [VLAN C],[10.0.0.0/30],[10.0.0.1],[10.0.0.2],[10.0.0.3]
 )
 
-== Adresy bran a stanic
+== Adresy brán a stanic
 
 #grid(
   columns: (1fr, 1fr),
@@ -192,7 +192,7 @@ Adresa mezi směrovačem R1 a směrovačem od ISP.
         [(R2-R3) R2],[202.206.130.41],
         [(R2-R3) R3],[202.206.130.42],
       ),
-      caption: [Adresy IPv4 výchozích \ a alternativních bran]
+      caption: [Adresy IPv4 výchozích \ a alternativních brán]
     )
   ],
   align(horizon)[
@@ -238,7 +238,7 @@ Zkratka `<pre>` je zde označení pro
   caption: [Rozsahy veřejných adres IPv6 v jednotlivích podsítích]
 )
 
-== Adresy bran a stanic
+== Adresy brán a stanic
 #grid(
   columns: (1fr, 1fr),
   align(horizon)[
@@ -258,7 +258,7 @@ Zkratka `<pre>` je zde označení pro
         [(R2-R3) R2],[\<pre\>:7004::4],
         [(R2-R3) R3],[\<pre\>:7004::5],
       ),
-      caption: [Adresy IPv6 výchozích \ a alternativních bran]
+      caption: [Adresy IPv6 výchozích \ a alternativních brán]
     )
   ],
   align(horizon)[
