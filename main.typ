@@ -109,7 +109,7 @@ Zadaná topologie (topologie H) sítě s barevně vyznačenými virtualními sí
 \ \ \
 
 #figure(
-  image("./pos_project_f.drawio.svg", width: 70%),
+  image("./pos_project.drawio.svg", width: 70%),
     caption: [Schéma základní topologie]
 )
 
@@ -147,7 +147,7 @@ Plán veřejných adres IPv4 s přiděleným prefixem 202.206.128.0/17.
 
 == Privátní rozsah
 
-Přidělená privátní adresa je 172.17.75.192/27.
+Zadaná privátní adresa je 172.17.75.192/27.
 
 #table(
   columns: (0.7fr, 1.2fr, 1.2fr, 1.2fr, 1fr),
@@ -239,7 +239,6 @@ tedy šest prvních bytů IPv6 adresy - 2002:d1ec:211a.
 )
 
 == Adresy bran a stanic
-# TODO: Upravit drawio shit
 #grid(
   columns: (1fr, 1fr),
   align(horizon)[
