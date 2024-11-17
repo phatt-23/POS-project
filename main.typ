@@ -283,7 +283,6 @@ tedy šest prvních bytů IPv6 adresy - 2002:d1ec:211a.
 
 = Schéma základní topologie s adresami
  
-Zkratka `<pre>` je zde opět označení pro 2002:d1ec:211a (prvních šest bytů IPv6 adresy).
 \ \
 #figure(
   image("./topologie_s_adresami.drawio.svg", width: 70%),
@@ -294,7 +293,6 @@ Zkratka `<pre>` je zde opět označení pro 2002:d1ec:211a (prvních šest bytů
 
 = Navržená L3 topologie s adresami
 
-Zkratka `<pre>` je označení pro 2002:d1ec:211a (prvních šest bytů IPv6 adresy).
 \ \
 #figure(
   image("./l3_topologie_s_adresami.drawio.svg", width: 90%),
