@@ -182,9 +182,9 @@ Adresa mezi směrovačem R1 a směrovačem od ISP.
         fill: (rgb("EAF2F5"), none),
         stroke: 0.8pt + rgb("323232"),
         table.header[*Označení rozhraní*][*Adresa*],
-        [VLAN A-R3],[202.206.128.1],
-        [VLAN B-R2],[172.17.75.193],
-        [VLAN C-R1],[10.0.0.2],
+        [(VLAN A) R3],[202.206.128.1],
+        [(VLAN B) R2],[172.17.75.193],
+        [(VLAN C) R1],[10.0.0.2],
         [(R1-R2) R1],[202.206.130.33],
         [(R1-R2) R2],[202.206.130.34],
         [(R1-R3) R1],[202.206.130.37],
@@ -248,9 +248,9 @@ tedy šest prvních bytů IPv6 adresy - 2002:d1ec:211a.
         fill: (rgb("EAF2F5"), none),
         stroke: 0.8pt + rgb("323232"),
         table.header[*Označení rozhraní*][*Adresa*],
-        [VLAN A-R3],[\<pre\>:7001::1],
-        [VLAN B-R2],[\<pre\>:7002::1],
-        [VLAN C-R1],[10.0.0.2],
+        [(VLAN A) R3],[\<pre\>:7001::1],
+        [(VLAN B) R2],[\<pre\>:7002::1],
+        [(VLAN C) R1],[10.0.0.2],
         [(R1-R2) R1],[\<pre\>:7004::1],
         [(R1-R2) R2],[\<pre\>:7004::2],
         [(R1-R3) R1],[\<pre\>:7004::3],
@@ -285,7 +285,7 @@ tedy šest prvních bytů IPv6 adresy - 2002:d1ec:211a.
  
 \ \
 #figure(
-  image("./topologie_s_adresami.drawio.svg", width: 70%),
+  image("./topologie_s_adresami.drawio.svg", width: 80%),
     caption: [Schéma základní topologie s adresami IPv4 a IPv6 (dual stack)]
 )
 
@@ -295,7 +295,7 @@ tedy šest prvních bytů IPv6 adresy - 2002:d1ec:211a.
 
 \ \
 #figure(
-  image("./l3_topologie_s_adresami.drawio.svg", width: 90%),
+  image("./l3_topologie_s_adresami.drawio.svg", width: 100%),
   caption: [Navržená L3 topologie s adresami IPv4 a IPv6 (dual stack)]
 )
 
