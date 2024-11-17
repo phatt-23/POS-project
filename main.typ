@@ -99,7 +99,7 @@ table(
  
 #figure(
   image("./pos_firma_ips.drawio.svg", width: 52%),
-  caption: [Popis sítě firmy a IPS],
+  caption: [Popis sítě firmy a ISP],
 )
 
 #pagebreak()
@@ -160,7 +160,7 @@ Zadaná privátní adresa je 172.17.75.192/27.
 
 == R1-ISP
 
-Adresa mezi směrovačem R1 a směrovačem od IPS.
+Adresa mezi směrovačem R1 a směrovačem od ISP.
 
 #table(
   columns: (0.7fr, 1.2fr, 1.2fr, 1.2fr, 1fr),
