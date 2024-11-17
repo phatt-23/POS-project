@@ -217,7 +217,7 @@ Adresa mezi směrovačem R1 a směrovačem od ISP.
 
 Plán adres IPv6 s přiděleným prefixem 2002:d1ec:211a:7000::/52.
 Zkratka `<pre>` je zde označení pro 
-tedy šest prvních bytů IPv6 adresy - 2002:d1ec:211a.
+šest prvních bytů IPv6 adresy - 2002:d1ec:211a.
 
 == Veřejný rozsah
 #figure(
@@ -233,7 +233,7 @@ tedy šest prvních bytů IPv6 adresy - 2002:d1ec:211a.
     [VLAN C],[\<pre\>:7003::/64],[\<pre\>:7003::1],[\<pre\>:7003:ffff:ffff:ffff:ffff],
     [R1-R2],[\<pre\>:7004::0/127],[\<pre\>:7004::0],[\<pre\>:7004::1],
     [R1-R3],[\<pre\>:7004::2/127],[\<pre\>:7004::2],[\<pre\>:7004::3],
-    [R2-R3],[\<pre\>:7004::4/127],[\<pre\>:7004::3],[\<pre\>:7004::4],
+    [R2-R3],[\<pre\>:7004::4/127],[\<pre\>:7004::4],[\<pre\>:7004::5],
   ),
   caption: [Rozsahy veřejných adres IPv6 v jednotlivích podsítích]
 )
@@ -251,12 +251,12 @@ tedy šest prvních bytů IPv6 adresy - 2002:d1ec:211a.
         [(VLAN A) R3],[\<pre\>:7001::1],
         [(VLAN B) R2],[\<pre\>:7002::1],
         [(VLAN C) R1],[10.0.0.2],
-        [(R1-R2) R1],[\<pre\>:7004::1],
-        [(R1-R2) R2],[\<pre\>:7004::2],
-        [(R1-R3) R1],[\<pre\>:7004::3],
-        [(R1-R3) R3],[\<pre\>:7004::4],
-        [(R2-R3) R2],[\<pre\>:7004::5],
-        [(R2-R3) R3],[\<pre\>:7004::6],
+        [(R1-R2) R1],[\<pre\>:7004::0],
+        [(R1-R2) R2],[\<pre\>:7004::1],
+        [(R1-R3) R1],[\<pre\>:7004::2],
+        [(R1-R3) R3],[\<pre\>:7004::3],
+        [(R2-R3) R2],[\<pre\>:7004::4],
+        [(R2-R3) R3],[\<pre\>:7004::5],
       ),
       caption: [Adresy IPv6 výchozích \ a alternativních bran]
     )
